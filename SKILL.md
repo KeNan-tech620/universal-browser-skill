@@ -23,8 +23,10 @@ Use this skill to complete browser-first tasks on unknown or semi-known websites
 - Prefer `refs="aria"` or other stable tool-native refs when supported.
 - Re-snapshot after navigation, modal changes, accordion expansion, filtering, sorting, or list refresh.
 - Change one thing at a time, then verify the page state before continuing.
+- Serialize field entry on the same page. Do not run multiple text-entry actions in parallel unless the environment explicitly guarantees isolated focus.
 - Stop and ask for help on login approval, 2FA, CAPTCHA, payment, posting, deletion, or other irreversible actions.
 - Confirm uploads and downloads by checking the visible file name, success toast, or resulting file path.
+- If the host environment restricts upload paths or uses a default download directory, stage files into the allowed upload location first and verify the final download path after clicking.
 - Keep destructive actions explicit. Do not rely on ambiguous buttons like "Submit" or "Delete" without a final state check.
 
 ## Workflow

@@ -94,6 +94,11 @@ Use this order:
 5. Submit
 6. Verify success
 
+Important:
+
+- On the same page, serialize text entry instead of running multiple input actions in parallel. Shared focus can cause values to land in the wrong field.
+- After each critical field or control change, re-snapshot before the final submit on dynamic forms.
+
 Typical success signals:
 
 - success toast
@@ -123,10 +128,11 @@ Before uploading:
 - confirm the local file path exists
 - verify the file name and type
 - check size limits if visible
+- if the browser environment restricts upload paths, copy or stage the file into the approved upload directory first
 
 After uploading:
 
-- verify the file name is shown in the UI
+- verify the file name is shown in the UI or exposed through page state
 - wait for processing indicators to finish
 - confirm the attachment appears in the final saved state
 
@@ -136,10 +142,12 @@ Before downloading:
 
 - record the expected file type and file name pattern
 - verify whether the action generates a file immediately or queues a background export
+- know the host's default download directory when possible
 
 After downloading:
 
-- confirm the file exists at the expected path if the tool exposes it
+- confirm the file exists at the expected path if the tool or host exposes it
+- read or inspect the file when practical to verify it is the intended artifact rather than an empty placeholder
 - mention the file name in the result
 
 ## 7. Common failure modes
