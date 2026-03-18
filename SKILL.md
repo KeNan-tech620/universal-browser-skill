@@ -117,5 +117,6 @@ When finishing a task, return:
 - Read `references/x-authenticated-search.md` and `references/x-public-access-boundary.md` for X/Twitter-specific guidance, auth requirements, and tested fallbacks.
 - Read `references/content-platform-matrix.md` for the current content-platform access map, plus the platform-specific files for Hacker News, Reddit, YouTube, Bilibili, and Douyin.
 - Read `references/chinese-demand-platform-matrix.md` plus the XiaoHongShu, WeChat article, and ZSXQ reference files for high-demand Chinese platform work.
+- For XiaoHongShu specifically, read both `references/xiaohongshu-live-mcp-setup.md` and `references/xiaohongshu-boundary-and-setup.md` so you know whether the blocker is service installation, login state, or browser/IP risk control.
 - Run `scripts/new_site_recipe.py` to create a reusable site recipe skeleton.
 - Run `scripts/serve_test_backend.py` to spin up a local authenticated admin fixture for stress tests.

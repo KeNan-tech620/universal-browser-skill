@@ -4,7 +4,7 @@ This matrix focuses on high-demand Chinese platforms and records what was actual
 
 | Platform | Tested path | Current status | Notes |
 |---|---|---|---|
-| 小红书 | browser + mcporter/xiaohongshu | Blocked / not configured | Browser showed `安全限制` and `IP at risk`; `xiaohongshu` MCP server is not configured; Docker is missing |
+| 小红书 | browser + local xiaohongshu MCP | Partial | Browser direct access is risk-controlled, but a local MCP binary service was installed, connected, and tested up to `未登录`; remaining blocker is account login state |
 | 微信公众号 | `miku_ai` search + local article reader | Working | Search returned article URLs; reader exported markdown and images successfully |
 | 知识星球 / ZSXQ | authenticated browser + original-image workflow | Working in authenticated session | Browser was already logged in; topic scanning and original image resolution succeeded |
 

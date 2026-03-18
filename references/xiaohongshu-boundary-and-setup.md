@@ -16,30 +16,32 @@ returned a risk-control page with:
 
 ### MCP path
 
-`agent-reach doctor` reported:
+Initial doctor output reported:
 
 - `小红书笔记 — mcporter 已装但小红书 MCP 未配置`
 
-Suggested setup from the doctor output:
+That gap was then pushed forward in this session:
 
-```bash
-docker run -d --name xiaohongshu-mcp -p 18060:18060 xpzouying/xiaohongshu-mcp
-mcporter config add xiaohongshu http://localhost:18060/mcp
-```
+- a non-Docker Linux binary build of `xiaohongshu-mcp` was downloaded and installed
+- the local service was started on `:18060`
+- `mcporter` was configured to connect to `http://localhost:18060/mcp`
+- tool schema listing succeeded
+- `check_login_status` succeeded and returned `未登录`
 
-### Local environment check
+### Local environment check after setup
 
 - `mcporter` exists
-- configured MCP servers currently include `exa`, `douyin`, and `weibo`
-- `xiaohongshu` is **not configured**
-- `docker` is **not installed** on this server right now
+- `xiaohongshu` is now configured in mcporter
+- the local MCP server can run without Docker
+- `docker` is still not installed on this server
+- the remaining blocker is **account login state**, not service installation
 
 ## Practical rule
 
 For the current server environment, treat XiaoHongShu as:
 
 - **blocked in direct browser mode** due to IP risk control
-- **not ready in MCP mode** because the `xiaohongshu` MCP server is not configured
+- **partially ready in MCP mode** because the local service is installed and connected, but the account is still not logged in
 
 ## What to do when a user asks for XiaoHongShu work
 
@@ -49,11 +51,11 @@ Be explicit that direct public access is currently blocked.
 
 ### If the goal is to make XiaoHongShu work properly
 
-Required recovery steps:
+Required recovery steps from the current state:
 
-1. Provide a reachable XiaoHongShu MCP service
-2. Configure it into `mcporter`
-3. Import/login cookies as needed
+1. Keep the reachable XiaoHongShu MCP service running
+2. Complete account login (QR or cookies)
+3. Re-check login status
 4. Re-test search and note-detail flows
 
 ## Recovery options
