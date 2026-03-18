@@ -113,5 +113,6 @@ When finishing a task, return:
 - Read `references/authenticated-admin-playbook.md` for login-state and complex back-office workflows.
 - Read `references/site-recipe-template.md` when documenting a repeated site workflow.
 - Read `references/ubs-admin-fixture-recipe.md` for a complete authenticated admin example.
+- Read `references/github-public-repo-search.md`, `references/github-public-repo-inspection.md`, and `references/github-release-asset-download.md` for real public-site examples.
 - Run `scripts/new_site_recipe.py` to create a reusable site recipe skeleton.
 - Run `scripts/serve_test_backend.py` to spin up a local authenticated admin fixture for stress tests.
