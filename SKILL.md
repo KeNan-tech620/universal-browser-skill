@@ -15,6 +15,8 @@ Use this skill to complete browser-first tasks on unknown or semi-known websites
 4. Work in short loops: inspect -> act -> re-snapshot -> verify.
 5. Report the result with evidence.
 6. If the workflow is likely to repeat, create a site recipe with `scripts/new_site_recipe.py` and `references/site-recipe-template.md`.
+7. For login-gated dashboards or back-office tools, read `references/authenticated-admin-playbook.md` first.
+8. For local repeatable verification, run `scripts/serve_test_backend.py` and use it as a login-state + admin-flow fixture.
 
 ## Operating rules
 
@@ -108,5 +110,8 @@ When finishing a task, return:
 ## Resources
 
 - Read `references/browser-playbook.md` for extraction, tables, forms, pagination, and auth handoff patterns.
+- Read `references/authenticated-admin-playbook.md` for login-state and complex back-office workflows.
 - Read `references/site-recipe-template.md` when documenting a repeated site workflow.
+- Read `references/ubs-admin-fixture-recipe.md` for a complete authenticated admin example.
 - Run `scripts/new_site_recipe.py` to create a reusable site recipe skeleton.
+- Run `scripts/serve_test_backend.py` to spin up a local authenticated admin fixture for stress tests.
