@@ -114,5 +114,6 @@ When finishing a task, return:
 - Read `references/site-recipe-template.md` when documenting a repeated site workflow.
 - Read `references/ubs-admin-fixture-recipe.md` for a complete authenticated admin example.
 - Read `references/github-public-repo-search.md`, `references/github-public-repo-inspection.md`, and `references/github-release-asset-download.md` for real public-site examples.
+- Read `references/x-authenticated-search.md` and `references/x-public-access-boundary.md` for X/Twitter-specific guidance, auth requirements, and tested fallbacks.
 - Run `scripts/new_site_recipe.py` to create a reusable site recipe skeleton.
 - Run `scripts/serve_test_backend.py` to spin up a local authenticated admin fixture for stress tests.
